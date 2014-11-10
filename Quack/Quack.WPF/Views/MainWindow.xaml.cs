@@ -21,9 +21,8 @@ namespace Quack.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private System.Threading.AutoResetEvent autoResetEvent;
         private static TwitterContext context = null;
-        static TextBlock tb = null;
+        private static PinAuthorizer auth = null;
 
         String pin;
 
@@ -31,36 +30,20 @@ namespace Quack.WPF
         {
             InitializeComponent();
 
-            autoResetEvent = new System.Threading.AutoResetEvent(false);
-
-            tb = (TextBlock)this.FindName("tweet");
-
-            var auth = QTwitter.GetPinAuthorizer();
+            auth = QTwitter.GetPinAuthorizer();
             auth.GoToTwitterAuthorization = pageLink =>
             {
                 Dispatcher.BeginInvoke(new Action(() =>
                 {
-                    WebBrowser webBrowser = (WebBrowser)this.FindName("webBrowser");
                     webBrowser.Source = new Uri(pageLink);
                 }));
             };
 
             auth.BeginAuthorizeAsync().ContinueWith(antecendent =>
             {
-                autoResetEvent.WaitOne();
-                
                 Dispatcher.BeginInvoke(new Action(() =>
                 {
-                    TextBox textBox = (TextBox)this.FindName("textBox");
-                    pin = textBox.Text;
-
-                    auth.CompleteAuthorizeAsync(pin).ContinueWith(antecendent1 =>
-                    {
-                        context = new LinqToTwitter.TwitterContext(auth);
-
-                        Task task = Query(context);
-                        task.Wait();
-                    });
+                    button.IsEnabled = true;
                 }));
             });
         }
@@ -78,14 +61,25 @@ namespace Quack.WPF
                 Dispatcher.BeginInvoke(new Action(() =>
                 {
                     var t = tweets.First();
-                    tb.Text = "@" + t.ScreenName + " " + t.Text;
+                    tweet.Text = "@" + t.ScreenName + " " + t.Text;
                 }));
             });
         }
 
         void button_Click(object sender, EventArgs e)
         {
-            autoResetEvent.Set();
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                pin = textBox.Text;
+
+                auth.CompleteAuthorizeAsync(pin).ContinueWith(antecendent =>
+                {
+                    context = new LinqToTwitter.TwitterContext(auth);
+
+                    Task task = Query(context);
+                    task.Wait();
+                });
+            }));
         }
     }
 }

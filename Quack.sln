@@ -11,6 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quack.Windows", "Quack\Quac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quack.WPF", "Quack\Quack.WPF\Quack.WPF.csproj", "{556EBF6D-3066-442D-881D-543602771006}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4BE07052-ED73-4ACA-B0F5-81B3192E7921}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Quack\Quack.Shared\Quack.Shared.projitems*{d59ae106-2756-4e88-bdb2-291f8ff0f4d2}*SharedItemsImports = 4

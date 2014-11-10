@@ -228,3 +228,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+# Twitter Keys
+Quack/Quack.Shared/Constants.cs
