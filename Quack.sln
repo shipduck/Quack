@@ -22,6 +22,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quack.Windows", "Quack\Quac
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Quack.Winstore.Shared", "Quack\Quack.Winstore\Quack.Winstore.Shared\Quack.Winstore.Shared.shproj", "{A824F67E-9A50-4488-A22C-A03432A02FF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quack.WindowsPhone", "Quack\Quack.Winstore\Quack.WindowsPhone\Quack.WindowsPhone.csproj", "{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quack.GTK", "Quack\Quack.GTK\Quack.GTK.csproj", "{8DCBF463-BA72-49FC-BAC9-5E9512267F1D}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Quack\Quack.Winstore\Quack.Winstore.Shared\Quack.Winstore.Shared.projitems*{a824f67e-9a50-4488-a22c-a03432a02ff2}*SharedItemsImports = 13
@@ -29,6 +33,7 @@ Global
 		Quack\Quack.Shared\Quack.Shared.projitems*{a9686e17-9a6a-4c0c-a0bc-20163a7916f9}*SharedItemsImports = 4
 		Quack\Quack.Winstore\Quack.Winstore.Shared\Quack.Winstore.Shared.projitems*{a9686e17-9a6a-4c0c-a0bc-20163a7916f9}*SharedItemsImports = 4
 		Quack\Quack.Shared\Quack.Shared.projitems*{556ebf6d-3066-442d-881d-543602771006}*SharedItemsImports = 4
+		Quack\Quack.Shared\Quack.Shared.projitems*{8dcbf463-ba72-49fc-bac9-5e9512267f1d}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +81,36 @@ Global
 		{A9686E17-9A6A-4C0C-A0BC-20163A7916F9}.Release|x86.ActiveCfg = Release|x86
 		{A9686E17-9A6A-4C0C-A0BC-20163A7916F9}.Release|x86.Build.0 = Release|x86
 		{A9686E17-9A6A-4C0C-A0BC-20163A7916F9}.Release|x86.Deploy.0 = Release|x86
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Debug|ARM.ActiveCfg = Debug|ARM
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Debug|ARM.Build.0 = Debug|ARM
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Debug|ARM.Deploy.0 = Debug|ARM
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Debug|x86.ActiveCfg = Debug|x86
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Debug|x86.Build.0 = Debug|x86
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Debug|x86.Deploy.0 = Debug|x86
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Release|ARM.ActiveCfg = Release|ARM
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Release|ARM.Build.0 = Release|ARM
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Release|ARM.Deploy.0 = Release|ARM
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Release|x64.ActiveCfg = Release|Any CPU
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Release|x86.ActiveCfg = Release|x86
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Release|x86.Build.0 = Release|x86
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5}.Release|x86.Deploy.0 = Release|x86
+		{8DCBF463-BA72-49FC-BAC9-5E9512267F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DCBF463-BA72-49FC-BAC9-5E9512267F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DCBF463-BA72-49FC-BAC9-5E9512267F1D}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{8DCBF463-BA72-49FC-BAC9-5E9512267F1D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8DCBF463-BA72-49FC-BAC9-5E9512267F1D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8DCBF463-BA72-49FC-BAC9-5E9512267F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DCBF463-BA72-49FC-BAC9-5E9512267F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DCBF463-BA72-49FC-BAC9-5E9512267F1D}.Release|ARM.ActiveCfg = Release|Any CPU
+		{8DCBF463-BA72-49FC-BAC9-5E9512267F1D}.Release|x64.ActiveCfg = Release|Any CPU
+		{8DCBF463-BA72-49FC-BAC9-5E9512267F1D}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,5 +121,7 @@ Global
 		{F90C51E3-8750-4F01-AB36-7FB47860678F} = {876098E6-8F97-406D-BE20-B3A1038D4920}
 		{A9686E17-9A6A-4C0C-A0BC-20163A7916F9} = {8AE9194A-E4C1-40D3-B625-A0715053A028}
 		{A824F67E-9A50-4488-A22C-A03432A02FF2} = {8AE9194A-E4C1-40D3-B625-A0715053A028}
+		{6DA19B22-4260-467D-A50C-4B1A3BB24FE5} = {8AE9194A-E4C1-40D3-B625-A0715053A028}
+		{8DCBF463-BA72-49FC-BAC9-5E9512267F1D} = {876098E6-8F97-406D-BE20-B3A1038D4920}
 	EndGlobalSection
 EndGlobal
