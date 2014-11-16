@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Quack", "Quack", "{876098E6-8F97-406D-BE20-B3A1038D4920}"
 EndProject
@@ -21,6 +21,7 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Quack\Quack.Shared\Quack.Shared.projitems*{d59ae106-2756-4e88-bdb2-291f8ff0f4d2}*SharedItemsImports = 4
+		Quack\Quack.Shared\Quack.Shared.projitems*{556ebf6d-3066-442d-881d-543602771006}*SharedItemsImports = 4
 		Quack\Quack.Shared\Quack.Shared.projitems*{41b9685f-e4b2-4bba-a9cf-e25e9d43c823}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,7 +5,7 @@
     <StackPanel>
         <WebBrowser x:Name="webBrowser" Source="http://www.google.com/" Width="600" Height="300" />
         <TextBox x:Name="textBox" Width="100" Height="20" />
-        <Button x:Name="button" Width="40" Height="20" Click="button_Click" IsEnabled="False">PIN</Button>
+        <Button x:Name="button" Width="40" Height="20" Click="button_Click">PIN</Button>
         <TextBlock x:Name="tweet" Width="600" Height="40">1123</TextBlock>
     </StackPanel>
 </Window>

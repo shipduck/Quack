@@ -19,33 +19,23 @@ namespace Quack.WPF
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, Quack.IAuthWebView
     {
         private static TwitterContext context = null;
-        private static PinAuthorizer auth = null;
+        private static IAuthorizer auth = null;
 
         String pin;
+
+        public void SetWebViewLocation(Uri authWebPageLink)
+        {
+            webBrowser.Source = authWebPageLink;
+        }
 
         public MainWindow()
         {
             InitializeComponent();
 
-            auth = QTwitter.GetPinAuthorizer();
-            auth.GoToTwitterAuthorization = pageLink =>
-            {
-                Dispatcher.BeginInvoke(new Action(() =>
-                {
-                    webBrowser.Source = new Uri(pageLink);
-                }));
-            };
-
-            auth.BeginAuthorizeAsync().ContinueWith(antecendent =>
-            {
-                Dispatcher.BeginInvoke(new Action(() =>
-                {
-                    button.IsEnabled = true;
-                }));
-            });
+            auth = QTwitter.BeginAuthorize(this);
         }
 
         private async Task Query(TwitterContext context)
@@ -70,16 +60,11 @@ namespace Quack.WPF
         {
             Dispatcher.BeginInvoke(new Action(() =>
             {
-                pin = textBox.Text;
-
-                auth.CompleteAuthorizeAsync(pin).ContinueWith(antecendent =>
-                {
-                    context = new LinqToTwitter.TwitterContext(auth);
-
-                    Task task = Query(context);
-                    task.Wait();
-                });
+                context = QTwitter.CompleteAuthorize(auth, textBox.Text);
             }));
+
+            Task task = Query(QTwitter.GetContext("temp"));
+            task.Wait();
         }
     }
 }
