@@ -1,0 +1,4 @@
+[submodule "ext/QuackTwitter"]
+	path = ext/QuackTwitter
+	url = https://github.com/shipduck/QuackTwitter.git
+	branch = master
