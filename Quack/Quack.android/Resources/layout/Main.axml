@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1">
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:layout_width="match_parent"
+        p1:layout_height="@android:dimen/notification_large_icon_height"
+        p1:id="@+id/linearLayout1"
+        p1:minWidth="25px"
+        p1:minHeight="25px">
+        <Button
+            p1:text="Write"
+            p1:layout_width="@android:dimen/notification_large_icon_width"
+            p1:layout_height="@android:dimen/notification_large_icon_height"
+            p1:id="@+id/write_button"
+            p1:layout_gravity="right" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:layout_below="@id/linearLayout1"
+        p1:id="@+id/linearLayout2">
+        <HorizontalScrollView
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:id="@+id/horizontalScrollView1" />
+    </LinearLayout>
+</RelativeLayout>
