@@ -30,22 +30,22 @@ namespace Quack.WPF
         {
             InitializeComponent();
 
-            auth = QTwitter.GetPinAuthorizer();
-            auth.GoToTwitterAuthorization = pageLink =>
-            {
-                Dispatcher.BeginInvoke(new Action(() =>
-                {
-                    webBrowser.Source = new Uri(pageLink);
-                }));
-            };
-
-            auth.BeginAuthorizeAsync().ContinueWith(antecendent =>
-            {
-                Dispatcher.BeginInvoke(new Action(() =>
-                {
-                    button.IsEnabled = true;
-                }));
-            });
+//             auth = QTwitter.GetPinAuthorizer();
+//             auth.GoToTwitterAuthorization = pageLink =>
+//             {
+//                 Dispatcher.BeginInvoke(new Action(() =>
+//                 {
+//                     webBrowser.Source = new Uri(pageLink);
+//                 }));
+//             };
+// 
+//             auth.BeginAuthorizeAsync().ContinueWith(antecendent =>
+//             {
+//                 Dispatcher.BeginInvoke(new Action(() =>
+//                 {
+//                     button.IsEnabled = true;
+//                 }));
+//             });
         }
 
         private async Task Query(TwitterContext context)
